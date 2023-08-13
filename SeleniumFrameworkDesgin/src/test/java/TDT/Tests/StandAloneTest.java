@@ -1,4 +1,4 @@
-package TDT;
+package TDT.Tests;
 
 import java.time.Duration;
 import java.util.List;
@@ -115,10 +115,10 @@ public class StandAloneTest {
 				+ "Quản lý và đánh giá hiệu quả công việc theo mô hình Agile/ OKR linh hoạt\r\n"
 				+ "Địa điểm làm việc: ITD Building- Quận 7)");
 		
-//		driver.findElement(By.cssSelector("button[class='sc-f1un1v-4 etAArU']")).click();
-//
-//		Assert.assertEquals(driver.findElement(By.cssSelector("div[class='content'] p[class='title']")).getText(), tilte);
-//		
+		driver.findElement(By.cssSelector("button[class='sc-f1un1v-4 etAArU']")).click();
+
+		Assert.assertEquals(driver.findElement(By.cssSelector("div[class='content'] p[class='title']")).getText(), tilte);
+		driver.quit();		
 
 	}
 	

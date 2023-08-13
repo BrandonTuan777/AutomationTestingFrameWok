@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-13T22:04:24 ICT" name="Default suite" finished-at="2023-08-13T22:04:48 ICT" duration-ms="24203">
+    <groups>
+      <group name="Logins">
+        <method signature="LoginTest.LoginSucces(java.util.HashMap)[pri:0, instance:TDT.Tests.LoginTest@eadd4fb]" name="LoginSucces" class="TDT.Tests.LoginTest"/>
+      </group> <!-- Logins -->
+    </groups>
+    <test started-at="2023-08-13T22:04:24 ICT" name="Default test" finished-at="2023-08-13T22:04:48 ICT" duration-ms="24203">
+      <class name="TDT.Tests.LoginTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TDT.Tests.LoginTest@eadd4fb]" started-at="2023-08-13T22:04:25 ICT" name="launchApplication" finished-at="2023-08-13T22:04:30 ICT" duration-ms="5375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="LoginSucces(java.util.HashMap)[pri:0, instance:TDT.Tests.LoginTest@eadd4fb]" started-at="2023-08-13T22:04:30 ICT" name="LoginSucces" data-provider="getData" finished-at="2023-08-13T22:04:37 ICT" duration-ms="7468" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{phone=0888700954, password=Tuanlaiduy1*}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginSucces -->
+        <test-method is-config="true" signature="shutDown()[pri:0, instance:TDT.Tests.LoginTest@eadd4fb]" started-at="2023-08-13T22:04:37 ICT" name="shutDown" finished-at="2023-08-13T22:04:38 ICT" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TDT.Tests.LoginTest@eadd4fb]" started-at="2023-08-13T22:04:38 ICT" name="launchApplication" finished-at="2023-08-13T22:04:41 ICT" duration-ms="3273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="LoginSucces(java.util.HashMap)[pri:0, instance:TDT.Tests.LoginTest@eadd4fb]" started-at="2023-08-13T22:04:41 ICT" name="LoginSucces" data-provider="getData" finished-at="2023-08-13T22:04:48 ICT" duration-ms="7466" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{phone=0902883759, password=dinhthi3105}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginSucces -->
+        <test-method is-config="true" signature="shutDown()[pri:0, instance:TDT.Tests.LoginTest@eadd4fb]" started-at="2023-08-13T22:04:48 ICT" name="shutDown" finished-at="2023-08-13T22:04:48 ICT" duration-ms="106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutDown -->
+      </class> <!-- TDT.Tests.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

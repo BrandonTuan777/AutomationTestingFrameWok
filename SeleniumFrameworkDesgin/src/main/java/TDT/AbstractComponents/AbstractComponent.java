@@ -34,12 +34,16 @@ public class AbstractComponent {
 	@FindBy(xpath = "//div[@class='sc-12qow75-2 kEyocY'][6]")
 	WebElement sixEle;
 	
+
+	
 	public void moveElementAndClick(By findBy,String ele) {
 		Actions a = new Actions(driver);
 		a.moveToElement(driver.findElement(findBy)).click()
 		.sendKeys(ele).build().perform();
 		firstEle.click();
 	}
+	
+	
 	
 	public void chooseFristElementAndClick(WebElement ele) {
 		ele.click();
@@ -69,5 +73,9 @@ public class AbstractComponent {
 	public void waitForElementToAppear(By findBy) {
 		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(findBy));
+	}
+	public void waitForWebElementToAppear(WebElement findBy) {
+		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
 }
