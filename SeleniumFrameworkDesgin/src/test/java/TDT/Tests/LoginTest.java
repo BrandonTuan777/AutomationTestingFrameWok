@@ -26,24 +26,18 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginTest extends BaseTest {
 
-	@Test(dataProvider = "getData", groups = { "Logins" })
+	@Test(dataProvider = "getData",groups = { "Logins" },retryAnalyzer=TDT.TestComponents.Retry.class)
 	public void LoginSucces(HashMap<String, String> input) throws IOException, InterruptedException {
 
 		// Đăng nhập
 		loginPage.LoginApplication(input.get("phone"), input.get("password"));
-
 		Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='sc-bljvhv-1 bpNYcO'])[1]")).getText(),
 				"Bất động sản");
 
 	}
 	
-	public String getScreenshot(String testCaseName) throws IOException {
-		TakesScreenshot ts=(TakesScreenshot)driver;
-		File source =ts.getScreenshotAs(OutputType.FILE);
-		File file=new File(System.getProperty("user.dir") + "//reports//" + testCaseName + "png");
-		FileUtils.copyFile(source, file);
-		return System.getProperty("user.dir") + "//reports//" + testCaseName + "png";
-	}
+	
+
 
 	@DataProvider
 	public Object[][] getData() throws IOException {

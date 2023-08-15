@@ -22,7 +22,7 @@ public class HomePage extends AbstractComponent {
 	By icon_house = By.cssSelector(".sc-bljvhv-5.kinNPk");
 	
 	public void creatNews() {
-		waitForElementToAppear(icon_house);
+		
 		buttonCrearteNews.click();
 	
 	}

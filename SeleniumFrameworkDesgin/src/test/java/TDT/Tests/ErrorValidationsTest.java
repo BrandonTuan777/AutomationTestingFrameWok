@@ -10,7 +10,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.IRetryAnalyzer;
 import org.testng.annotations.Test;
+
+import com.sun.net.httpserver.Authenticator.Retry;
 
 import TDT.TestComponents.BaseTest;
 import TDT.pageobjects.HomePage;
@@ -20,8 +23,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ErrorValidationsTest extends BaseTest {
 
-	@Test(groups = {"Error"})
-	public void createNew() throws IOException, InterruptedException {
+	@Test(groups = {"Error"},retryAnalyzer=TDT.TestComponents.Retry.class)
+	public void errorValidationLogin() throws IOException, InterruptedException {
 
 		// Đăng nhập
 		loginPage.LoginApplication("0888700954", "Tuanlaiduy12*");
