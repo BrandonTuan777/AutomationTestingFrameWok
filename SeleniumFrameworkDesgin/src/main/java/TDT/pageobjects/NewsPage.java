@@ -112,7 +112,7 @@ public class NewsPage extends AbstractComponent {
 	WebElement submit_button;
 	
 	
-	String tilte_content ="BUSINESS ANALYST- DIGITAL TRANSFORMATION (MIDDLE/SENIOR)";
+	String tilte_content ="BUSINESS ANALYST- DIGITAL TRANSFORMATION(MIDDLE/SENIOR)";
 	String describe_content ="Mô tả công việc\r\n"
 			+ "ITD Group là tập đoàn đa ngành, hoạt động trong lĩnh vực tích hợp hệ thống.\r\n"
 			+ "\r\n"

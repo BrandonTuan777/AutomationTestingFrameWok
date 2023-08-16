@@ -26,11 +26,14 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import TDT.pageobjects.LoginPage;
+import TDT.pageobjects.NewsPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	public WebDriver driver;
 	public LoginPage loginPage;
+
+	
 
 	public WebDriver initializeDriver() throws IOException {
 

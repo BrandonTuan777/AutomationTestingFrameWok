@@ -1,58 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-15T13:58:20 ICT" name="Suite" finished-at="2023-08-15T13:58:45 ICT" duration-ms="24729">
+  <suite started-at="2023-08-16T12:18:40 ICT" name="Surefire suite" finished-at="2023-08-16T12:19:07 ICT" duration-ms="27339">
     <groups>
-      <group name="Logins">
-        <method signature="LoginTest.LoginSucces(java.util.HashMap)[pri:0, instance:TDT.Tests.LoginTest@491b9b8]" name="LoginSucces" class="TDT.Tests.LoginTest"/>
-      </group> <!-- Logins -->
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@13e39c73]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-08-15T13:58:20 ICT" name="CreateNewsTest" finished-at="2023-08-15T13:58:20 ICT" duration-ms="14">
-    </test> <!-- CreateNewsTest -->
-    <test started-at="2023-08-15T13:58:21 ICT" name="LoginTest" finished-at="2023-08-15T13:58:45 ICT" duration-ms="24277">
-      <class name="TDT.Tests.LoginTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TDT.Tests.LoginTest@491b9b8]" started-at="2023-08-15T13:58:21 ICT" name="launchApplication" finished-at="2023-08-15T13:58:28 ICT" duration-ms="6803" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="LoginSucces(java.util.HashMap)[pri:0, instance:TDT.Tests.LoginTest@491b9b8]" started-at="2023-08-15T13:58:28 ICT" name="LoginSucces" data-provider="getData" finished-at="2023-08-15T13:58:35 ICT" duration-ms="7400" status="PASS">
+    <test started-at="2023-08-16T12:18:40 ICT" name="Surefire test" finished-at="2023-08-16T12:19:07 ICT" duration-ms="27339">
+      <class name="cucumber.TestNGTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGTestRunner@13e39c73]" started-at="2023-08-16T12:18:40 ICT" name="setUpClass" finished-at="2023-08-16T12:18:40 ICT" duration-ms="610" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{phone=0888700954, password=Tuanlaiduy1*}]]>
+                <![CDATA[org.testng.TestRunner@6c17c0f8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginSucces -->
-        <test-method is-config="true" signature="shutDown()[pri:0, instance:TDT.Tests.LoginTest@491b9b8]" started-at="2023-08-15T13:58:35 ICT" name="shutDown" finished-at="2023-08-15T13:58:35 ICT" duration-ms="30" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- shutDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TDT.Tests.LoginTest@491b9b8]" started-at="2023-08-15T13:58:35 ICT" name="launchApplication" finished-at="2023-08-15T13:58:37 ICT" duration-ms="2335" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="LoginSucces(java.util.HashMap)[pri:0, instance:TDT.Tests.LoginTest@491b9b8]" started-at="2023-08-15T13:58:37 ICT" name="LoginSucces" data-provider="getData" finished-at="2023-08-15T13:58:45 ICT" duration-ms="7395" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@13e39c73]" started-at="2023-08-16T12:18:40 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-16T12:19:07 ICT" duration-ms="26640" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{phone=0902883759, password=dinhthi3105}]]>
+                <![CDATA["Positive Test of Create a new post"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Create a news post from website rongbay.com"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginSucces -->
-        <test-method is-config="true" signature="shutDown()[pri:0, instance:TDT.Tests.LoginTest@491b9b8]" started-at="2023-08-15T13:58:45 ICT" name="shutDown" finished-at="2023-08-15T13:58:45 ICT" duration-ms="24" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGTestRunner@13e39c73]" started-at="2023-08-16T12:19:07 ICT" name="tearDownClass" finished-at="2023-08-16T12:19:07 ICT" duration-ms="40" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- shutDown -->
-      </class> <!-- TDT.Tests.LoginTest -->
-    </test> <!-- LoginTest -->
-    <test started-at="2023-08-15T13:58:45 ICT" name="ErrorValidationsTest" finished-at="2023-08-15T13:58:45 ICT" duration-ms="1">
-    </test> <!-- ErrorValidationsTest -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumber.TestNGTestRunner -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>
