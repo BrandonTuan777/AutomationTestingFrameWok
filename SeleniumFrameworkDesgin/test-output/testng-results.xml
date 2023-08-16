@@ -1,47 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-16T10:53:16 ICT" name="Default suite" finished-at="2023-08-16T10:53:30 ICT" duration-ms="13815">
+  <suite started-at="2023-08-16T17:00:00 ICT" name="Default suite" finished-at="2023-08-16T17:00:25 ICT" duration-ms="25072">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@46d59067]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-08-16T10:53:16 ICT" name="Default test" finished-at="2023-08-16T10:53:30 ICT" duration-ms="13815">
-      <class name="cucumber.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGTestRunner@46d59067]" started-at="2023-08-16T10:53:16 ICT" name="setUpClass" finished-at="2023-08-16T10:53:17 ICT" duration-ms="691" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@21e45a6f]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2023-08-16T17:00:00 ICT" name="Default test" finished-at="2023-08-16T17:00:25 ICT" duration-ms="25072">
+      <class name="TDT.excelDataProvider.dataProvide">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TDT.excelDataProvider.dataProvide@5d99c6b5]" started-at="2023-08-16T17:00:00 ICT" name="launchApplication" finished-at="2023-08-16T17:00:06 ICT" duration-ms="6130" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGTestRunner@46d59067]" started-at="2023-08-16T10:53:17 ICT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-16T10:53:30 ICT" duration-ms="13041" status="PASS">
+        </test-method> <!-- launchApplication -->
+        <test-method signature="login_With_Excel_Data(java.lang.String,java.lang.String)[pri:0, instance:TDT.excelDataProvider.dataProvide@5d99c6b5]" started-at="2023-08-16T17:00:06 ICT" name="login_With_Excel_Data" data-provider="driverTest" finished-at="2023-08-16T17:00:14 ICT" duration-ms="7442" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Title of your scenario outline"]]>
+                <![CDATA[0888700954]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Error validation"]]>
+                <![CDATA[Tuanlaiduy1*]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGTestRunner@46d59067]" started-at="2023-08-16T10:53:30 ICT" name="tearDownClass" finished-at="2023-08-16T10:53:30 ICT" duration-ms="25" status="PASS">
+        </test-method> <!-- login_With_Excel_Data -->
+        <test-method is-config="true" signature="shutDown()[pri:0, instance:TDT.excelDataProvider.dataProvide@5d99c6b5]" started-at="2023-08-16T17:00:14 ICT" name="shutDown" finished-at="2023-08-16T17:00:14 ICT" duration-ms="125" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- cucumber.TestNGTestRunner -->
+        </test-method> <!-- shutDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:TDT.excelDataProvider.dataProvide@5d99c6b5]" started-at="2023-08-16T17:00:14 ICT" name="launchApplication" finished-at="2023-08-16T17:00:17 ICT" duration-ms="3100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="login_With_Excel_Data(java.lang.String,java.lang.String)[pri:0, instance:TDT.excelDataProvider.dataProvide@5d99c6b5]" started-at="2023-08-16T17:00:17 ICT" name="login_With_Excel_Data" data-provider="driverTest" finished-at="2023-08-16T17:00:25 ICT" duration-ms="7376" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0902883759]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dinhthi3105]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_With_Excel_Data -->
+        <test-method is-config="true" signature="shutDown()[pri:0, instance:TDT.excelDataProvider.dataProvide@5d99c6b5]" started-at="2023-08-16T17:00:25 ICT" name="shutDown" finished-at="2023-08-16T17:00:25 ICT" duration-ms="103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutDown -->
+      </class> <!-- TDT.excelDataProvider.dataProvide -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
