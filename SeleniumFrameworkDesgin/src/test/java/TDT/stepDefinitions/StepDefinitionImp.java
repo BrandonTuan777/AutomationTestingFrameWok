@@ -24,7 +24,7 @@ public class StepDefinitionImp extends BaseTest {
 	}
 	
 	@Given("^Logged in with user phone number (.+) and password (.+)$")
-	public void logged_in_phonenumber_and_password(String phone,String password) throws InterruptedException {
+	public void logged_in_phoneNumber_and_password(String phone,String password) throws InterruptedException {
 		loginPage.LoginApplication(phone,password);
 		
 	}

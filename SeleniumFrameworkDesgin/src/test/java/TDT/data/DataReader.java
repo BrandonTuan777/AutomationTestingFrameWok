@@ -23,10 +23,7 @@ public class DataReader {
 	List<HashMap<String,String>> data=mapper.readValue(jsonContent, new TypeReference<List<HashMap<String,String>>>(){		
 	});
 	return data;
-	
-	//{map,map}
-	
-	
+
 	}
 
 }

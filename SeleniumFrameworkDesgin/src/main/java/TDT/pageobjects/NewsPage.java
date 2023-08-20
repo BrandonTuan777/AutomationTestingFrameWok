@@ -18,9 +18,6 @@ public class NewsPage extends AbstractComponent {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-//	driver.findElement(By.xpath("//button[@class=\"sc-5fp63n-6 jEGfcq\"]")).click();
-//	sleep(2000);
-//	List<WebElement> topics = driver.findElements(By.xpath("//div[@class=\"sc-12fxoq3-4 hyuWUa\"]"));
 
 	@FindBy(xpath = "//button[@class=\"sc-5fp63n-6 jEGfcq\"]")
 	WebElement buttonTopic;
@@ -44,9 +41,9 @@ public class NewsPage extends AbstractComponent {
 	WebElement companyName;
 
 	@FindBy(xpath = "(//div[@class='sc-5fp63n-5 fOhFor'])[4]")
-	WebElement carrers;
+	WebElement careers;
 
-	By carrer_search = By.xpath("//input[@placeholder='Nhập để tìm Ngành nghề']");
+	By career_search = By.xpath("//input[@placeholder='Nhập để tìm Ngành nghề']");
 
 	@FindBy(xpath = "(//div[@class='sc-5fp63n-5 fOhFor'])[5]")
 	WebElement natural_of_work;
@@ -95,7 +92,7 @@ public class NewsPage extends AbstractComponent {
 	@FindBy(css = "[class=\"react-datepicker-popper\"] [class='react-datepicker__current-month']")
 	WebElement month;
 
-	@FindBy(css = "[class=\"react-datepicker-popper\"] [aria-label$='Next Month")
+	@FindBy(css = "[class=\"react-datepicker-popper\"] [aria-label$='Next Month']")
 	WebElement next_month_button;
 
 	@FindBy(css = ".react-datepicker__day")
@@ -139,10 +136,7 @@ public class NewsPage extends AbstractComponent {
 			+ "Công ty có ngân sách dành riêng cho cá nhân học tập, phát triển bản thân\r\n"
 			+ "Quản lý và đánh giá hiệu quả công việc theo mô hình Agile/ OKR linh hoạt\r\n"
 			+ "Địa điểm làm việc: ITD Building- Quận 7)";
-	
-	
-//	driver.findElement(By.cssSelector("input[name='title']")).sendKeys(tilte);
-//	driver.findElement(By.cssSelector("textarea[name='body']")).sendKeys("Mô tả công việc\r\n"
+
 
 	public void CreateNews() throws InterruptedException {
 		buttonTopic.click();
@@ -155,20 +149,20 @@ public class NewsPage extends AbstractComponent {
 		districts.click();
 		moveElementAndClick(search_district, "7");
 		companyName.sendKeys("CÔNG TY CỔ PHẦN CÔNG NGHỆ TIÊN PHONG");
-		carrers.click();
-		moveElementAndClick(carrer_search, "Công nghệ");
-		chooseFristElementAndClick(natural_of_work);
+		careers.click();
+		moveElementAndClick(career_search, "Công nghệ");
+		chooseFirstElementAndClick(natural_of_work);
 		vacancies.sendKeys("1");
 		//
 		chooseFourthElementAndClick(experience);
 		chooseFifthElementAndClick(educational_level);
-		chooseFristElementAndClick(way_of_payment);
+		chooseFirstElementAndClick(way_of_payment);
 		//
 		min_salary.sendKeys("18000000");
 		max_salary.sendKeys("30000000");
 		min_age.sendKeys("25");
 		max_age.sendKeys("40");
-		chooseFristElementAndClick(sex);
+		chooseFirstElementAndClick(sex);
 		calendarSelect("Tháng Mười","21");
 		//
 		title.sendKeys(tilte_content);

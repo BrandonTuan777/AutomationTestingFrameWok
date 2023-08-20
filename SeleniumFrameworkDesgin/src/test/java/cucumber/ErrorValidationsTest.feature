@@ -12,9 +12,9 @@ Feature: Error validation
   Scenario Outline: Title of your scenario outline
     Given I landed on LoginPage
     Given Logged in with user phone number <phone> and password <password>
-    Then <erro_message> message is display
+    Then <error_message> message is display
 
        Examples: 
-      | phone  		 | password     |erro_message																									|
+      | phone  		 | password     |error_message																									|
       | 0888700954 |Tuanlaiduy12* |Số điện thoại hoặc mật khẩu chưa đúng, vui lòng kiểm tra lại.|
      
