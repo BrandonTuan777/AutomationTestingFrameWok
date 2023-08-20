@@ -6,6 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 
+import lombok.var;
 import org.apache.commons.io.FileUtils;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -13,17 +14,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class DataReader {
 
-	public List<HashMap<String, String>> getJsonDataToMap() throws IOException {
-		
-		//read Json to String
-	String jsonContent=	FileUtils.readFileToString(new File(System.getProperty("user.dir")+"//src//test//java//TDT//data//Login.json"),StandardCharsets.UTF_8);
-	
-	//String to HashMap Jackson Databind
-	ObjectMapper mapper=new ObjectMapper();
-	List<HashMap<String,String>> data=mapper.readValue(jsonContent, new TypeReference<List<HashMap<String,String>>>(){		
-	});
-	return data;
-
-	}
-
+    public static List<HashMap<String, String>> getJsonDataToMap() throws IOException {
+		var file = new File(System.getProperty("user.dir") + "//src//test//java//TDT//data//Login.json");
+        String jsonContent = FileUtils.readFileToString(file, StandardCharsets.UTF_8);
+        ObjectMapper mapper = new ObjectMapper();
+		var typeReference = new TypeReference<List<HashMap<String, String>>>() {};
+        List<HashMap<String, String>> data = mapper.readValue(jsonContent, typeReference);
+        return data;
+    }
 }
