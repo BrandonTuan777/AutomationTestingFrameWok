@@ -28,5 +28,4 @@ public class LoginTest extends BaseTest {
         List<HashMap<String, String>> data = DataReader.getJsonDataToMap();
         return new Object[][]{{data.get(0)}, {data.get(1)}};
     }
-
 }

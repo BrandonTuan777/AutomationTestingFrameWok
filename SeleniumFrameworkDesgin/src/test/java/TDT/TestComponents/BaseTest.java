@@ -2,14 +2,12 @@ package TDT.TestComponents;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
@@ -21,19 +19,14 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import TDT.pageobjects.LoginPage;
-import TDT.pageobjects.NewsPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	public WebDriver driver;
 	public LoginPage loginPage;
-
-	
 
 	public WebDriver initializeDriver() throws IOException {
 
@@ -71,19 +64,6 @@ public class BaseTest {
 		return driver;
 	}
 
-	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
-
-		// read Json to String
-		String jsonContent = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
-
-		// String to HashMap Jackson Databind
-		ObjectMapper mapper = new ObjectMapper();
-		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
-				new TypeReference<List<HashMap<String, String>>>() {
-				});
-		return data;
-	}
-
 	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
@@ -92,15 +72,12 @@ public class BaseTest {
 		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
 	}
 
-	// {map,map}
-
 	@BeforeMethod(alwaysRun = true)
 	public LoginPage launchApplication() throws IOException {
 		driver = initializeDriver();
 		loginPage = new LoginPage(driver);
 		loginPage.goTo();
 		return loginPage;
-
 	}
 
 	@AfterMethod(alwaysRun = true)

@@ -16,34 +16,31 @@ import org.testng.annotations.Test;
 import TDT.TestComponents.BaseTest;
 
 public class dataProvide extends BaseTest {
+    DataFormatter formatter = new DataFormatter();
 
-	
-	DataFormatter formatter =new DataFormatter();
-	@Test(dataProvider = "driverTest")
-	public void login_With_Excel_Data(String phone, String password) throws InterruptedException {
-		loginPage.LoginApplication(phone, password);
-		Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='sc-bljvhv-1 bpNYcO'])[1]")).getText(),
-				"Bất động sản");
-	}
+    @Test(dataProvider = "driverTest")
+    public void login_With_Excel_Data(String phone, String password) throws InterruptedException {
+        loginPage.LoginApplication(phone, password);
+        Assert.assertEquals(driver.findElement(By.xpath("(//div[@class='sc-bljvhv-1 bpNYcO'])[1]")).getText(),
+                "Bất động sản");
+    }
 
-	@DataProvider(name = "driverTest")
-	public Object[][] getData() throws IOException {
-		// Object[][] data={{"0888700954","Tuanlaiduy1*"}},{"0902883759","dinhthi3105"}}
-		FileInputStream fis = new FileInputStream("C:\\Users\\USER\\Documents\\excelDriven.xlsx");
-		XSSFWorkbook wb = new XSSFWorkbook(fis);
-		XSSFSheet sheet = wb.getSheetAt(0);
-		int rowCount = sheet.getPhysicalNumberOfRows();
-		XSSFRow row = sheet.getRow(0);
-		int colcount = row.getLastCellNum();
-		Object data[][] = new Object[rowCount - 1][colcount];
-		for (int i = 0; i < rowCount - 1; i++) {
-			row = sheet.getRow(i + 1);
-			for (int j = 0; j < colcount; j++) {
-				XSSFCell cell=row.getCell(j);
-				
-				data[i][j]=formatter.formatCellValue(cell);
-			}
-		} 
-		return data;
-	}
+    @DataProvider(name = "driverTest")
+    public Object[][] getData() throws IOException {
+        FileInputStream fis = new FileInputStream("C:\\Users\\USER\\Documents\\excelDriven.xlsx");
+        XSSFWorkbook wb = new XSSFWorkbook(fis);
+        XSSFSheet sheet = wb.getSheetAt(0);
+        int rowCount = sheet.getPhysicalNumberOfRows();
+        XSSFRow row = sheet.getRow(0);
+        int colcount = row.getLastCellNum();
+        Object data[][] = new Object[rowCount - 1][colcount];
+        for (int i = 0; i < rowCount - 1; i++) {
+            row = sheet.getRow(i + 1);
+            for (int j = 0; j < colcount; j++) {
+                XSSFCell cell = row.getCell(j);
+                data[i][j] = formatter.formatCellValue(cell);
+            }
+        }
+        return data;
+    }
 }
